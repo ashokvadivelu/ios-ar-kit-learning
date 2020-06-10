@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nca-UJ-DAW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Positioning Nodes-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PositioningNodes" customModule="AR_learning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h2L-bq-UsA">
+                                <rect key="frame" x="0.0" y="59" width="414" height="837"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLO-v8-xbS">
+                                <rect key="frame" x="45" y="729" width="61" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="VUk-xb-gKA"/>
+                                    <constraint firstAttribute="width" constant="61" id="wxF-tl-k3k"/>
+                                </constraints>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8uI-CG-95I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yLO-v8-xbS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="gzx-ok-qFt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yLO-v8-xbS" secondAttribute="bottom" constant="34" id="mlI-mB-LOM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="i9f-d2-eKX"/>
+                    <connections>
+                        <outlet property="actionButton" destination="yLO-v8-xbS" id="Lus-QM-MSB"/>
+                        <outlet property="sceneView" destination="h2L-bq-UsA" id="daf-yC-KG7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="707" y="210"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nUy-kn-vUU">
+            <objects>
+                <viewController id="nca-UJ-DAW" customClass="ViewController" customModule="AR_learning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ps3-Qs-0M1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AR-KIT Samples" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6Z-e1-cMj">
+                                <rect key="frame" x="113" y="89" width="188" height="71"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="lGY-P0-sQX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="usR-lX-2ec">
+                                <rect key="frame" x="0.0" y="203" width="414" height="635"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lN-cU-liZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
+                                        <state key="normal" title="Position Shapes in AR View"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="IXs-FE-hG6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2a-HO-Mw6">
+                                        <rect key="frame" x="0.0" y="88" width="414" height="68"/>
+                                        <state key="normal" title="Draw 3d in ARView"/>
+                                        <connections>
+                                            <segue destination="7VF-uD-hxK" kind="show" id="aDG-d1-buF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0u-qr-Zm6">
+                                        <rect key="frame" x="0.0" y="176" width="414" height="68"/>
+                                        <state key="normal" title="Planet Earth"/>
+                                        <connections>
+                                            <segue destination="LvG-jW-xGL" kind="show" id="gDo-a0-V0f"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9p-sE-ZnP">
+                                        <rect key="frame" x="0.0" y="264" width="414" height="68"/>
+                                        <state key="normal" title="3D Model"/>
+                                        <connections>
+                                            <segue destination="4Qx-UH-awD" kind="show" id="rcY-IL-Ffb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcn-Py-vhc">
+                                        <rect key="frame" x="0.0" y="352" width="414" height="68"/>
+                                        <state key="normal" title="AR Plane Detection"/>
+                                        <connections>
+                                            <segue destination="ojC-4J-hft" kind="show" id="Tk4-Jo-adb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cT-VR-5kR">
+                                        <rect key="frame" x="0.0" y="440" width="414" height="195"/>
+                                        <state key="normal" title="AR Ruler"/>
+                                        <connections>
+                                            <segue destination="xai-Nm-Af9" kind="show" id="CrA-fi-lSO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="usR-lX-2ec" firstAttribute="leading" secondItem="u7l-yp-zJ4" secondAttribute="leading" id="0xf-I8-WFO"/>
+                            <constraint firstItem="s6Z-e1-cMj" firstAttribute="top" secondItem="u7l-yp-zJ4" secondAttribute="top" constant="45" id="4iv-LR-l2G"/>
+                            <constraint firstItem="usR-lX-2ec" firstAttribute="trailing" secondItem="u7l-yp-zJ4" secondAttribute="trailing" id="CyU-dE-E4P"/>
+                            <constraint firstItem="usR-lX-2ec" firstAttribute="top" secondItem="s6Z-e1-cMj" secondAttribute="bottom" constant="43" id="E5B-go-sKM"/>
+                            <constraint firstItem="s6Z-e1-cMj" firstAttribute="centerX" secondItem="Ps3-Qs-0M1" secondAttribute="centerX" id="PhL-0Q-w2g"/>
+                            <constraint firstItem="u7l-yp-zJ4" firstAttribute="bottom" secondItem="usR-lX-2ec" secondAttribute="bottom" constant="24" id="l0S-Wd-Oco"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="u7l-yp-zJ4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TQZ-Z2-epS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-614.49275362318849" y="236.38392857142856"/>
+        </scene>
+        <!--Drawing Shapes-->
+        <scene sceneID="plG-HE-L2M">
+            <objects>
+                <viewController id="7VF-uD-hxK" customClass="DrawingShapes" customModule="AR_learning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MQH-Fn-Sja">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZrR-Jl-m1a">
+                                <rect key="frame" x="0.0" y="59" width="414" height="837"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14d-Gc-fRd">
+                                <rect key="frame" x="127" y="729" width="160" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ROQ-76-XwR"/>
+                                </constraints>
+                                <state key="normal" title="Hold and Move to Draw"/>
+                                <connections>
+                                    <action selector="addAction:" destination="7VF-uD-hxK" eventType="touchUpInside" id="plm-Hc-6TQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="14d-Gc-fRd" firstAttribute="centerX" secondItem="MQH-Fn-Sja" secondAttribute="centerX" id="Klb-gU-TrN"/>
+                            <constraint firstItem="zqp-c2-jwv" firstAttribute="bottom" secondItem="14d-Gc-fRd" secondAttribute="bottom" constant="34" id="o0g-7a-yKl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zqp-c2-jwv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="48M-LH-fcw"/>
+                    <connections>
+                        <outlet property="actionButton" destination="14d-Gc-fRd" id="AuB-je-fav"/>
+                        <outlet property="sceneView" destination="ZrR-Jl-m1a" id="iv8-ww-rv4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kPc-9d-VlD" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1635" y="431"/>
+        </scene>
+        <!--Planet Earth-->
+        <scene sceneID="t2B-6N-t27">
+            <objects>
+                <viewController id="LvG-jW-xGL" customClass="PlanetEarth" customModule="AR_learning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IX7-ce-qdF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6u2-z9-OAH">
+                                <rect key="frame" x="0.0" y="59" width="414" height="837"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zc-94-UMl">
+                                <rect key="frame" x="176.5" y="729" width="61" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="HEb-mg-VTo"/>
+                                    <constraint firstAttribute="width" constant="61" id="MgL-lR-H4g"/>
+                                </constraints>
+                                <state key="normal" title="PLAY"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addAction:" destination="LvG-jW-xGL" eventType="touchUpInside" id="YHD-LV-2OE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qPA-lY-tuT" firstAttribute="bottom" secondItem="4zc-94-UMl" secondAttribute="bottom" constant="34" id="AsT-Q5-G1G"/>
+                            <constraint firstItem="4zc-94-UMl" firstAttribute="centerX" secondItem="IX7-ce-qdF" secondAttribute="centerX" id="Spq-87-70s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qPA-lY-tuT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="j4U-cZ-gMW"/>
+                    <connections>
+                        <outlet property="actionButton" destination="4zc-94-UMl" id="hzf-ov-D1g"/>
+                        <outlet property="sceneView" destination="6u2-z9-OAH" id="yyU-m1-gvQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Cn-UD-6yX" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2455" y="413"/>
+        </scene>
+        <!--Rendering3D Model-->
+        <scene sceneID="MVY-Ha-5o2">
+            <objects>
+                <viewController id="4Qx-UH-awD" customClass="Rendering3DModel" customModule="AR_learning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MWg-Zw-EIA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DRt-U3-Ztw">
+                                <rect key="frame" x="0.0" y="59" width="414" height="837"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrX-Sw-PsX">
+                                <rect key="frame" x="45" y="729" width="61" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="1nd-Pe-9tb"/>
+                                    <constraint firstAttribute="height" constant="45" id="eir-pT-hjj"/>
+                                </constraints>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addAction:" destination="4Qx-UH-awD" eventType="touchUpInside" id="w1a-Oh-Dyx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NrX-Sw-PsX" firstAttribute="leading" secondItem="FeS-gV-eh8" secondAttribute="leading" constant="45" id="0Ry-KW-ANu"/>
+                            <constraint firstItem="FeS-gV-eh8" firstAttribute="bottom" secondItem="NrX-Sw-PsX" secondAttribute="bottom" constant="34" id="cJl-EH-5ll"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FeS-gV-eh8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="L3v-VA-mvl"/>
+                    <connections>
+                        <outlet property="actionButton" destination="NrX-Sw-PsX" id="GNL-Qf-90w"/>
+                        <outlet property="sceneView" destination="DRt-U3-Ztw" id="ett-lx-1Ug"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pZt-87-Swy" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1894" y="-160"/>
+        </scene>
+        <!--Plane Detection-->
+        <scene sceneID="02f-7F-J7S">
+            <objects>
+                <viewController id="ojC-4J-hft" customClass="ARPlaneDetection" customModule="AR_learning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DRD-Vj-Vlb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1sN-EJ-aV5">
+                                <rect key="frame" x="0.0" y="59" width="414" height="837"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="L1i-dD-iQC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wbz-gp-urx"/>
+                    <connections>
+                        <outlet property="sceneView" destination="1sN-EJ-aV5" id="Gqw-KO-hNv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4H7-J1-Vi2" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96" y="-231"/>
+        </scene>
+        <!--Ruler-->
+        <scene sceneID="Tww-Lq-S0S">
+            <objects>
+                <viewController id="xai-Nm-Af9" customClass="ARRuler" customModule="AR_learning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3sq-PW-vzM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z5R-FL-vXd">
+                                <rect key="frame" x="0.0" y="59" width="414" height="837"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="3oR-Ym-a7x"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xzr-Xt-d8k"/>
+                    <connections>
+                        <outlet property="sceneView" destination="Z5R-FL-vXd" id="Lxd-MR-Zud"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dGK-Uq-z8f" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2684" y="-216"/>
+        </scene>
+    </scenes>
+</document>
